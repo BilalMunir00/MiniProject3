@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 @if (tasks == null)
 {
     <p><em>Loading...</em></p>
@@ -13,9 +13,6 @@ else
     {
         <div class="d-flex col col-lg-3 border-bottom" @key="taskItem">
     <div class="p-2 flex-fill">
-        @* <button class="btn btn-link" title="Edit task" @onclick="@(()=>EditTask(taskItem))">
-            Edit
-        </button> *@
         <input type="checkbox" checked="@taskItem.IsComplete" @onchange="@(()=>CheckboxChecked(taskItem))" />
         <span class="@((taskItem.IsComplete? "completed-task" : ""))">
             @taskItem.TaskName
@@ -25,7 +22,8 @@ else
         <button class="btn btn-outline-danger btn-sm" title="Delete task" @onclick="@(()=>DeleteTask(taskItem))">
             <span class="oi oi-trash"></span>
         </button>
-        <a title="Edit task" href="/edittask/@taskItem.TaskItemId">Edit</a>
+        @* Write your code here *@
+        
     </div>
 </div>
     }
